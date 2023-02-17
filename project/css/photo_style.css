@@ -2,7 +2,8 @@
 GALLERY SECTION ANIMATION
 =======================================*/
 
-p {font-weight: 300;
+p {
+font-weight: 300;
 line-height: 30px;
 padding-bottom: 15px;
 }
@@ -21,7 +22,7 @@ padding-bottom: 15px;
 
 .photo-container {
     text-align: canter;
-    margin: 15px autto;
+    margin: 15px auto;
     width: 300px;
     height: 169px;
 }
@@ -68,7 +69,7 @@ padding-bottom: 15px;
     height: 100%;
     color: #fff;
 }
-.photo-overlay {
+.photo-overlay:hover {
     opacity: 1;
 }
 
