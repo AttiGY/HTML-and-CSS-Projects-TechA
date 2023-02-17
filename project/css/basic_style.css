@@ -60,7 +60,7 @@ h1{
 }
 
 .squares:nth-child(4) {
-	background: #00h200;
+	background: #00b200
 }
 
 /* -------------------------------------------
@@ -68,7 +68,7 @@ h1{
 ---------------------------------------------*/
 .container .squares:nth-child(-n+4):hover {
 	background-image: url("../images/icons/smileyface1.png");
-	transform: scale(.5);
+	
 	animation-name: race;
 	animation-duration: 2.5s;
 	animation-iteration-count: infinite;
@@ -77,7 +77,6 @@ h1{
 .squares:nth-child(1):hover {
 	background: #13b4ff
 }
-
 
 .squares:nth-child(2):hover {
 	background: #d861af;
@@ -90,6 +89,11 @@ h1{
 .squares:nth-child(4):hover {
 	background: #77b800;
 }
+
+.button:hover {
+		background: #77b800;
+}
+
 /* ----------------------------
 	ANIMATION EFFECT
 -------------------------------*/
