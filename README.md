@@ -14,4 +14,4 @@
     <p>Website was styled by using CSS. Contains navbar, animated images and from</p>
 
 <h3> Basic portfolio website </h3>
-    <p>basic portfolio website that is styled with CSS, contains animations, navbar, and for that is using a 3P service</p>
+    <p>basic portfolio website that is styled with CSS, contains animations, navbar, and form that is using a 3P service</p>
