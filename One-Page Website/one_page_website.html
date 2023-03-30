@@ -1,81 +1,123 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 	<head>
 		<meta charset="utf-8">
 		<title> Warbirds </title>
-		<h1> WARBIRDS </h1>
-			
-	</head>
-	
-	<Body>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="./css/one_page_website.css">
+</head>
+
+
+	<body>
 		<header>
-		<!--NAV-->
-		<div>
-				<div>
-					<ul>
-						<a href="#home" id="link"><li>HOME</li></a>
-						<a href="#video"><li>VIDEO</li></a>
-						<a href="#photos"><li>PHOTOS</li></a>
-						<a href="#contact"><li>CONTACT US</li></a>
-					</ul>
-				</div>
-		</div>
-		<!--END NAV-->
-		
-		
-			
-			<p> WWII ERA WARPLANES </p>
-		</header>
-		<main>
-			<!--VIDEO-->
-				<section>
-					<div id="video">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/_YFjm5GtzIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-					</div>
-				</section>
-			<!--END VIDEO-->
-		
-		
-			<!--PHOTOS-->
-			<section>
-				<div id="photos">
-				<h1>PHOTOS</h1>
+			<!--NAV-->
+			<div>
 					<div>
-								
-						<!--Warbird 1-->
-							<div>
-								<div>
-								<img src="./images/thumbnail/thumbnail_1.jpg" alt="Spitfire">
-								</div>
-							</div>
-						<!--END--Warbird 1-->
-					
-					
-					
-						<!--Warbird 2-->
-							<div>
-								<div>
-								<img src="./images/thumbnail/thumbnail_2.jpg" alt="Messerschmitt">
-								</div>
-							</div>
-						<!--END--Warbird 2-->
-					
-						<!--Warbird 3-->
-							<div>
-								<div>
-								<img src="./images/thumbnail/thumbnail_3.jpg" alt="Mustang">
-								</div>
-							</div>
-						<!--END--Warbird 3-->
+						<ul>
+							<a href="#home" id="link"><li>HOME</li></a>
+							<a href="#video"><li>VIDEO</li></a>
+							<a href="#photos"><li>PHOTOS</li></a>
+							<a href="#contact"><li>CONTACT US</li></a>
+						</ul>
 					</div>
+			</div>
+			<!--END NAV-->
+
+					
+			
+				
+				<h1> WWII ERA WARPLANES </h1>
+			</header>
+
+			<!--VIDEO-->
+			<section>
+				<div id="video">
+					<h2>VIDEO</h2>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/_YFjm5GtzIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 				</div>
 			</section>
-			
-			<!--CONTACT US-->
+		<!--END VIDEO-->
+		
+		<!--PHOTOS-->
+			<section>
+				<div id="photos">
+				<h2>PHOTOS</h2>
+									<!--Gallery start-->
+								<div class="row">
+									<div class="column">
+										<img src="./Images/Thumbnail/Thumbnail_1small.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="Spitfire">
+									</div>
+
+									<div class="column">
+										<img src="./Images/Thumbnail/Thumbnail_2small.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="Messerschmitt">
+									</div>
+
+									<div class="column">
+										<img src="./Images/Thumbnail/Thumbnail_3small.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="Mustang">
+									</div>
+
+									<div class="column">
+										<img src="./Images/Thumbnail/Thumbnail_4small.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="MIG-3">
+									</div>
+								</div>
+								
+								<div id="myModal" class="modal">
+									<span class="close cursor" onclick="closeModal()">&times;</span>
+									<div class="modal-content">
+								
+										<div class="mySlides">
+											<div class="numbertext">1 / 4</div>
+												<img src="./Images/Thumbnail/Thumbnail_1.jpg" style="width:100%">
+										</div>
+								
+										<div class="mySlides">
+											<div class="numbertext">2 / 4</div>
+												<img src="./Images/Thumbnail/Thumbnail_2.jpg" style="width:100%">
+										</div>
+								
+										<div class="mySlides">
+											<div class="numbertext">3 / 4</div>
+												<img src="./Images/Thumbnail/Thumbnail_3.jpg" style="width:100%">
+										</div>
+									
+										<div class="mySlides">
+											<div class="numbertext">4 / 4</div>
+												<img src="./Images/Thumbnail/Thumbnail_4.jpg" style="width:100%">
+										</div>
+									
+										<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+										<a class="next" onclick="plusSlides(1)">&#10095;</a>
+								
+										<div class="caption-container">
+											<p id="caption"></p>
+										</div>
+								
+								
+										<div class="column">
+											<img class="demo cursor" src="./Images/Thumbnail/Thumbnail_1small.jpg" style="width:100%" onclick="currentSlide(1)" alt="Spitfire">
+										</div>
+
+										<div class="column">
+											<img class="demo cursor" src="./Images/Thumbnail/Thumbnail_2small.jpg" style="width:100%" onclick="currentSlide(2)" alt="Messerschmitt">
+										</div>
+
+										<div class="column">
+											<img class="demo cursor" src="./Images/Thumbnail/Thumbnail_3small.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mustang">
+										</div>
+
+										<div class="column">
+											<img class="demo cursor" src="./Images/Thumbnail/Thumbnail_4small.jpg" style="width:100%" onclick="currentSlide(4)" alt="MIG-3">
+										</div>
+									</div>
+								</div>
+				</div>
+			</section>
+
+		<!--CONTACT US-->
 		<section>
 			<div id="contact">
 				<div>
-					<h1>CONTACT US</h1>
+					<h2>CONTACT US</h2>
 					<div>
 						<div>
 							<form action="" method="post">
@@ -92,22 +134,23 @@
 				</div>
 			</section>
 		<!--CONTACT US-->
-		
-			<!--NAV-->
-				<div>
-					<div>
-						<ul>
-							<a href="#home" id="link"><li>HOME</li></a>
-							<a href="#video"><li>VIDEO</li></a>
-							<a href="#photos"><li>PHOTOS</li></a>
-						</ul>
-					</div>
-				</div>
-			<!--END NAV-->
+
+		<!--NAV-->
+		<div>
+			<div>
+				<ul>
+					<a href="#home" id="link"><li>HOME</li></a>
+					<a href="#video"><li>VIDEO</li></a>
+					<a href="#photos"><li>PHOTOS</li></a>
+				</ul>
+			</div>
+		</div>
+		<!--END NAV-->
 		</main>
 		<footer>
 			<p>learning to code - 2023</p>
 		</footer>
-		
-	 </body>
+
+		<script src="./JS/one_page_website.js"></script>
+	</body>
 </html>
