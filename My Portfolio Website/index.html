@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" />
         <title>Attila Gyurkovics Portfolio</title>
+        <link rel="shortcut icon" type="img/jpg" href="images/coding_icon.png">
         <link rel="stylesheet" type="text/css" href="./stylesheet/portfolio.css">
     </head>
 
@@ -14,14 +15,13 @@
         <!--Navbar-->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
+            <!-- Onclick and ondblclick functions added to open and close the contact form -->
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
         </div>
 
-        <!--Breaks for adding space between navbar and the first heading-->
-        <br>
-        <br>
 
         <!--Background video-->
         <div id="Home">
@@ -45,6 +45,58 @@
                     <br> Thank you for stopping by and enjoy! 
                 </p>
             </strong>
+        </div>
+
+        <!-- Slideshow section added -->
+        <div id="Slideshow">
+            <div id="Slideshow_Background"> 
+                <div id="Slideshow_Container">
+                    <!-- Slide 1 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/face.jpg" alt="face photo">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/html5_logo.JPG" alt="HTML5_logo"> 
+                        <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML,</div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/css_logo.JPG" alt="CSS logo">
+                        <div class="text">will style your website with CSS,</div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/JS_logo.JPG" alt="JS logo">
+                        <div class="text">and make it dynamic with JavaScript. </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/browser_logo.JPG" alt="Browser logo"> 
+                        <div class="text">Guaranteed optimal performance in all browsers.</div>
+                    </div>
+                    <!-- Slide 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/contactme.jpg" alt="contactpic"> 
+                        <div class="text"><a class="white-text contact" onclick="openForm()">Don't hesitate to contact me.</a></div> 
+                    </div>
+                    <!-- Previous and next buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br> <!-- Adds a space between the slideshow images and the dots -->
+ 
+                <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" onclick="currentSlide(6)"></span> 
+                </div>
+            </div>
         </div>
 
         <!--About section-->
@@ -83,27 +135,28 @@
         </div>
 
         <!--Contact section-->
-        <div class="Row" id="Contact">
-            <!--Contact image, column left-->
-            <div class="Column_2 Column_tall">
-                <img src="images/contact.jpg" alt="Contact_Image">
-            </div>
-            <!--Contact form, column right-->
-            <div class="Column_1 Column_tall">
-                <h1>Contact</h1>
+       
+           <!-- Contact form -->
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
                 <!--This specifies where and how to send the form data;-->
-                <form action="https://formspree.io/f/mqkobykn" method="POST"> <!-- 3rd party service to submit the contact form data, formspree endpoint is added-->
-                    <form action="https://formspree.io/f/mqkobykn" method="POST"> <!-- 3rd party service to submit the contact form data, formspree endpoint is added-->
-                    <label>Name:</label>
-                        <input type="text" placeholder="Full name">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Email">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
-                </form>
+                 <form action="https://formspree.io/f/mqkobykn" method="POST" class="form-container"><!-- 3rd party service to submit the contact form data, formspree endpoint is added-->
+                     <h1>Contact</h1>
+                     <label for="name"><b>Name</b></label>
+                       <input type="text" placeholder="Full name" name="name" required>
+                     <label for="phone"><b>Phone</b></label>
+                       <input type="text" placeholder="Phone number" name="phone">
+                     <label for="email"><b>Email</b></label>		
+                       <input type="text" placeholder="Email address" name="email" required>
+                     <label for="message"><b>Message</b></label>
+                       <input type="text" placeholder="Message" name="message">
+          
+                     <button type="submit" class="btn">SUBMIT</button>
+                     <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                 </form>
             </div>
-        </div>
+         </div>
 
         <!--Footer section-->
         <footer>
@@ -112,5 +165,6 @@
                 <br>
             </p>
         </footer>
+        <script src="JS/portfolio.js"></script>
     </body>
 </html>
